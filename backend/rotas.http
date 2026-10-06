@@ -1,0 +1,27 @@
+ # Listar tarefas
+GET http://localhost:3333/api/tasks
+###
+# Criar uma tarefa com data limite
+POST http://localhost:3333/api/tasks
+Content-Type: application/json
+
+{
+
+    "title": "Estudar Fastify",
+    "dueDate": "2026-09-20"
+
+}
+
+###
+# Marcar como concluída (troque 1 pelo id retornado)
+PATCH http://localhost:3333/api/tasks/11
+Content-Type: application/json
+
+{
+    "completed": true
+    
+}
+###
+
+# Excluir
+DELETE http://localhost:3333/api/tasks/11
